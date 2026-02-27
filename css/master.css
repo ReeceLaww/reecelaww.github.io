@@ -2,7 +2,9 @@ body .site {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto 1fr;
-  grid-template-areas: "h h h h h h h h h h h h h" "c c c c c c c c c c c c c" "f f f f f f f f f f f f f";
+  grid-template-areas: "h h h h h h h h h h h h"
+  "c c c c c c c c c c c c"
+  "f f f f f f f f f f f f";
 }
 
 body .site header {
