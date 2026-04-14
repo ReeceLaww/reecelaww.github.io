@@ -1,1 +1,115 @@
-body .content{background:url(../assets/img/pics/bg/tractorbg.jpeg) no-repeat center;background-size:cover;height:auto;min-height:700px;display:flex;flex-direction:column;align-items:center;padding:50px 40px;box-sizing:border-box}.content .forsale{font-family:"Kavivanar",cursive;font-size:4.5rem;color:#9FFFCB;margin:0 0 40px;text-shadow:2px 2px 8px rgba(0,0,0,0.7)}.content .listings{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;width:100%}.content .listing-card{background:rgba(88,123,127,0.88);border-radius:8px;padding:24px;text-align:center;transition:transform 0.2s ease}.content .listing-card:hover{transform:translateY(-4px)}.content .listing-card i{font-size:2.5rem;color:#9FFFCB;margin-bottom:12px;display:block}.content .listing-card h3{font-family:"Oswald",sans-serif;color:white;font-size:1.4rem;margin:0 0 10px}.content .listing-card p{font-family:"Open Sans",sans-serif;color:#ddd;font-size:0.95rem;margin:0 0 18px;line-height:1.5}.content .listing-card .enquire{display:inline-block;background:transparent;color:#9FFFCB;border:1px solid #9FFFCB;padding:8px 18px;border-radius:4px;font-family:"Open Sans",sans-serif;font-size:0.9rem;text-decoration:none;transition:background 0.2s,color 0.2s}.content .listing-card .enquire:hover{background:#9FFFCB;color:#2d4d51}@media only screen and (max-width:1024px){.content .listings{grid-template-columns:repeat(2,1fr)}.content .forsale{font-size:3.5rem}}@media only screen and (max-width:768px){.content{padding:30px 20px}.content .forsale{font-size:3rem}}@media only screen and (max-width:480px){.content .listings{grid-template-columns:1fr}.content .forsale{font-size:2.5rem}}
+body .content {
+  background: url(../assets/img/pics/bg/tractorbg.jpeg) no-repeat center / cover;
+  height: auto;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 40px 80px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body .content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6,13,23,0.74);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content .forsale,
+.content .listings {
+  position: relative;
+  z-index: 1;
+}
+
+.content .forsale {
+  font-family: "Rubik", sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #e8f0fe;
+  margin: 0 0 48px;
+  letter-spacing: 0.04em;
+}
+
+.content .forsale span { color: #00d4aa; }
+
+.content .listings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.content .listing-card {
+  background: rgba(13,27,42,0.90);
+  border: 1px solid rgba(0,212,170,0.18);
+  border-radius: 10px;
+  padding: 30px 22px;
+  text-align: center;
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.content .listing-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,212,170,0.6);
+}
+
+.content .listing-card i {
+  font-size: 2.4rem;
+  color: #00d4aa;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.content .listing-card h3 {
+  font-family: "Oswald", sans-serif;
+  color: #e8f0fe;
+  font-size: 1.3rem;
+  margin: 0 0 10px;
+  letter-spacing: 0.04em;
+}
+
+.content .listing-card p {
+  font-family: "Open Sans", sans-serif;
+  color: #7a92a8;
+  font-size: 0.93rem;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.content .listing-card .enquire {
+  display: inline-block;
+  background: transparent;
+  color: #00d4aa;
+  border: 1px solid #00d4aa;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.88rem;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.content .listing-card .enquire:hover {
+  background: #00d4aa;
+  color: #060d17;
+}
+
+@media only screen and (max-width: 1024px) {
+  .content .listings { grid-template-columns: repeat(2, 1fr); }
+  .content .forsale { font-size: 2.8rem; }
+}
+
+@media only screen and (max-width: 768px) {
+  body .content { padding: 40px 20px 60px; }
+  .content .forsale { font-size: 2.2rem; }
+}
+
+@media only screen and (max-width: 480px) {
+  .content .listings { grid-template-columns: 1fr; }
+}

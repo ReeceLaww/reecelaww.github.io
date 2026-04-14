@@ -1,1 +1,140 @@
-@import url("https://fonts.googleapis.com/css?family=Kavivanar|Open+Sans|Oswald|Rubik");body .site{display:grid;grid-template-columns:repeat(12, 1fr);grid-template-rows:auto auto 1fr;grid-template-areas:"h h h h h h h h h h h h" "c c c c c c c c c c c c" "f f f f f f f f f f f f"}body .site header{grid-area:h;background:#587B7F;display:grid;grid-template-columns:1fr auto 2fr 7fr;grid-template-areas:". l . n"}body .site header nav{grid-area:n;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-areas:"home sale contact about"}body .site header nav .active_page{border-top:7px solid #9FFFCB}body .site header nav .link{color:#E6E6E6;text-decoration:none;text-align:center;font-family:"Oswald";font-size:2.3rem}body .site header nav .link:hover{color:#e6a62c}body .site header nav #home{grid-area:home}body .site header nav #forsale{grid-area:sale}body .site header nav #contact{grid-area:contact}body .site header nav #about{grid-area:about}body .site header a{grid-area:l}body .site header a .logo{max-width:380px}body .content{height:1000px;background-position:center;width:100%;grid-area:c}footer{grid-area:f;background:#4a6b6f;display:flex;align-items:center;justify-content:center;padding:16px 20px;gap:32px;flex-wrap:wrap;min-height:80px}footer .sponsor{max-height:48px;max-width:110px;object-fit:contain;opacity:0.75;transition:opacity 0.2s ease}footer .sponsor:hover{opacity:1}@media only screen and (max-width: 1024px){body .site header nav .link{font-size:1.9rem}}@media only screen and (max-width: 768px){body .site header nav .link{font-size:1.4rem}body .site header a .logo{max-width:250px}}@media only screen and (max-width: 768px){body .site header{grid-area:h;background:#587B7F;display:grid;grid-template-columns:1fr auto 2fr 7fr;grid-template-rows:1fr 1fr;grid-template-areas:". l l ." "n n n n"}body .site header nav{grid-area:n}body .site header nav .link{font-size:1.3rem}body .site header a .logo{max-width:250px}}
+@import url("https://fonts.googleapis.com/css?family=Kavivanar|Open+Sans|Oswald|Rubik");
+
+body {
+  margin: 0;
+  background: #060d17;
+  background-image:
+    linear-gradient(rgba(0,212,170,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,170,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+body .site {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "c c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+  min-height: 100vh;
+}
+
+body .site header {
+  grid-area: h;
+  background: #0d1b2a;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "l n";
+  border-bottom: 1px solid rgba(0,212,170,0.18);
+}
+
+body .site header nav {
+  grid-area: n;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "home sale catalog contact about";
+}
+
+body .site header nav .active_page {
+  border-bottom: 3px solid #00d4aa;
+}
+
+body .site header nav .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #8ba8c4;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  box-sizing: border-box;
+}
+
+body .site header nav .link p {
+  margin: 0;
+}
+
+body .site header nav .link:hover {
+  color: #00d4aa;
+}
+
+body .site header nav #home    { grid-area: home; }
+body .site header nav #forsale { grid-area: sale; }
+body .site header nav #catalog { grid-area: catalog; }
+body .site header nav #contact { grid-area: contact; }
+body .site header nav #about   { grid-area: about; }
+
+body .site header a {
+  grid-area: l;
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+}
+
+body .site header a .logo {
+  max-width: 300px;
+  height: auto;
+}
+
+body .content {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  grid-area: c;
+}
+
+footer {
+  grid-area: f;
+  background: #060d17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 48px;
+  gap: 48px;
+  flex-wrap: wrap;
+  min-height: 88px;
+  border-top: 1px solid rgba(0,212,170,0.15);
+}
+
+footer .sponsor {
+  max-height: 44px;
+  max-width: 100px;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: grayscale(40%) brightness(1.2);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+footer .sponsor:hover {
+  opacity: 1;
+  filter: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  body .site header nav .link { font-size: 1.45rem; }
+}
+
+@media only screen and (max-width: 900px) {
+  body .site header nav .link { font-size: 1.15rem; letter-spacing: 0; }
+  body .site header a .logo { max-width: 220px; }
+}
+
+@media only screen and (max-width: 640px) {
+  body .site header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "l" "n";
+  }
+  body .site header a {
+    justify-content: center;
+    padding: 10px 0 6px;
+  }
+  body .site header a .logo { max-width: 180px; }
+  body .site header nav .link { font-size: 0.9rem; }
+  footer { gap: 20px; padding: 14px 16px; }
+  footer .sponsor { max-height: 32px; max-width: 70px; }
+}
