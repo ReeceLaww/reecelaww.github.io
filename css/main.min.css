@@ -1,1 +1,76 @@
-.content{background:url(../assets/img/pics/bg/claastractorbg2.jpg) no-repeat;display:grid;grid-template-columns:repeat(12, 1fr);grid-template-rows:95px 75px 1fr 6fr;grid-template-areas:". wt wt wt . . . . . . . ." ". . bwm bwm bwm bwm . . . . . ." ". . . . . . . . . . . ." ". p p p p p . . . . . ."}.content #welcome_to{font-family:"Rubik";color:#25A18E;grid-area:wt;font-size:5rem;animation-delay:0.3s}.content #bwm_machinery{font-family:"Rubik";color:#25A18E;grid-area:bwm;font-size:4rem;animation-delay:0.8s}.content p{grid-area:p;font-family:"Open Sans";font-size:1.4rem;font-weight:bold;color:white;animation-delay:0.2s}@media only screen and (max-width: 1024px){.content{grid-template-columns:repeat(12, 1fr);grid-template-rows:95px 75px 1fr 6fr 1fr;grid-template-areas:". wt wt wt wt wt wt . . . . ." ". . bwm bwm bwm bwm bwm bwm . . . ." ". . . . . . . . . . . ." ". p p p p p p . . . . ." "f f f f f f f f f f f f"}.content #welcome_to{font-family:"Rubik";color:#25A18E;grid-area:wt;font-size:4rem}.content #bwm_machinery{font-family:"Rubik";color:#25A18E;grid-area:bwm;font-size:3.5rem}.content p{font-size:1.2rem}}@media only screen and (max-width: 768px){.content{grid-template-columns:repeat(12, 1fr);grid-template-rows:95px 75px 1fr 6fr;grid-template-areas:". wt wt wt wt wt wt . . . . ." ". . bwm bwm bwm bwm bwm bwm bwm bwm bwm ." ". . . . . . . . . . . ." ". p p p p p p p p . . ."}.content #welcome_to{font-family:"Rubik";color:#25A18E;grid-area:wt;font-size:4.3rem}.content #bwm_machinery{font-family:"Rubik";color:#25A18E;grid-area:bwm;font-size:3.9rem}.content p{font-size:1.2rem}}@media only screen and (max-width: 375px){.content{grid-template-columns:repeat(12, 1fr);grid-template-rows:65px 25px 1fr 6fr;grid-template-areas:". . wt wt wt wt wt wt wt wt wt ." ". . bwm bwm bwm bwm bwm bwm bwm bwm bwm ." ". . . . . . . . . . . ." ". p p p p p p p p p p ."}.content #welcome_to{font-family:"Rubik";color:#25A18E;grid-area:wt;font-size:3rem}.content #bwm_machinery{font-family:"Rubik";color:#25A18E;grid-area:bwm;font-size:2.3rem}.content p{font-size:0.9rem;text-align:center}}
+body .content {
+  background: url(../assets/img/pics/bg/claastractorbg2.jpg) no-repeat center / cover;
+  height: 88vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10% 80px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body .content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(6,13,23,0.90) 0%, rgba(6,13,23,0.68) 50%, rgba(6,13,23,0.25) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content #welcome_to,
+.content #bwm_machinery,
+.content p {
+  position: relative;
+  z-index: 1;
+}
+
+.content #welcome_to {
+  font-family: "Rubik", sans-serif;
+  color: #00d4aa;
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  font-weight: 400;
+  animation-delay: 0.2s;
+}
+
+.content #bwm_machinery {
+  font-family: "Rubik", sans-serif;
+  color: #e8f0fe;
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0 0 28px;
+  line-height: 1.05;
+  animation-delay: 0.5s;
+}
+
+.content p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: rgba(200,216,232,0.82);
+  max-width: 520px;
+  line-height: 1.78;
+  margin: 0;
+  animation-delay: 0.9s;
+}
+
+@media only screen and (max-width: 1024px) {
+  body .content { padding: 0 8% 80px; }
+  .content #bwm_machinery { font-size: 4rem; }
+}
+
+@media only screen and (max-width: 768px) {
+  body .content { padding: 0 6% 60px; height: 80vh; }
+  .content #welcome_to { font-size: 0.88rem; }
+  .content #bwm_machinery { font-size: 3rem; }
+  .content p { font-size: 1rem; }
+}
+
+@media only screen and (max-width: 480px) {
+  body .content { padding: 0 5% 40px; }
+  .content #bwm_machinery { font-size: 2.4rem; }
+  .content p { font-size: 0.92rem; }
+}
