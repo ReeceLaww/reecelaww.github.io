@@ -54,8 +54,11 @@ body .site header nav #about {
   grid-area: about;
 }
 
-body .site header .logo {
+body .site header a {
   grid-area: l;
+}
+
+body .site header a .logo {
   max-width: 380px;
 }
 
@@ -64,4 +67,28 @@ body .content {
   background-position: center;
   width: 100%;
   grid-area: c;
+}
+
+footer {
+  grid-area: f;
+  background: #4a6b6f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  gap: 32px;
+  flex-wrap: wrap;
+  min-height: 80px;
+}
+
+footer .sponsor {
+  max-height: 48px;
+  max-width: 110px;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+footer .sponsor:hover {
+  opacity: 1;
 }
